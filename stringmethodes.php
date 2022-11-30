@@ -58,11 +58,11 @@ if (isset($_POST['submit'])) {
      * Hiervoor gebruik je de functie strtolower()
      */
     echo
-        $naam, '<br>',
-        $straat, '<br>',
+        ucfirst(strtolower($naam)), '<br>',
+        ucfirst(strtolower($straat)), '<br>',
         $huisnummer, '<br>',
         $postcode, '<br>',
-        $woonplaats, '<br>';
+        ucfirst(strtolower($woonplaats)), '<br>';
 
     /*
      * OPDRACHT 5:

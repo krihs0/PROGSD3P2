@@ -14,17 +14,18 @@ echo 'Prijs: ' . $prijs;
 <h2>Winkelmand</h2>
 <form action="" method="post">
     <label for="product">Product:</label><br>
-    <input  type="text" name="product" required placeholder="product"><br>
-    <label onchange="<?php check(); ?>" for="aantal">Aantal:</label><br>
-    <input type=number name="aantal" required placeholder="aantal">><br><br>
+    <input type="text" name="product" required placeholder="product"><br>
+    <label for="aantal">Aantal:</label><br>
+    <input type=number name="aantal" required placeholder="aantal"><br><br>
     <input type="submit" name="submit" value="toevoegen" >
 </form>
 <p>Vul je geen action in dan wordt het formulier verwerkt door de huidige pagina.</p>
 
 <?php
-
-function check(){
-    echo "ja";
+if($_POST['aantal'] < 1){
+    $_POST['aantal'] = 1;
+}elseif($_POST['aantal'] > 15){
+    $_POST['aantal'] = 15;
 }
 
 // Controleer of het formulier is verstuurd

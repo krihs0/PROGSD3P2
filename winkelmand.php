@@ -14,14 +14,18 @@ echo 'Prijs: ' . $prijs;
 <h2>Winkelmand</h2>
 <form action="" method="post">
     <label for="product">Product:</label><br>
-    <input type="text" name="product" required placeholder="product"><br>
-    <label for="aantal">Aantal:</label><br>
+    <input  type="text" name="product" required placeholder="product"><br>
+    <label onchange="<?php check(); ?>" for="aantal">Aantal:</label><br>
     <input type=number name="aantal" required placeholder="aantal">><br><br>
     <input type="submit" name="submit" value="toevoegen" >
 </form>
 <p>Vul je geen action in dan wordt het formulier verwerkt door de huidige pagina.</p>
 
 <?php
+
+function check(){
+    echo "ja";
+}
 
 // Controleer of het formulier is verstuurd
 if ($_POST['submit']) {
@@ -31,20 +35,15 @@ if ($_POST['submit']) {
 
 
     // Controleer of het aantal > 0 is.
-    if(is_numeric($aantal)){
-        if ($aantal > 0) { 
-            $totaalprijs = $aantal * $prijs;
-    
-            echo
-            "Gekozen Product en totaal prijs <br> <br>",
-            "Product: ", $product, "<br>",
-            "Aantal in winkelmand: ", $aantal, "<br>",
-            "Totaal prijs: ", $totaalprijs;
-        }
-    }else{
-        echo "Voer een geldig nummer in bij Aantal";
+    if ($aantal > 0) { 
+        $totaalprijs = $aantal * $prijs;
+
+        echo
+        "Gekozen Product en totaal prijs <br> <br>",
+        "Product: ", $product, "<br>",
+        "Aantal in winkelmand: ", $aantal, "<br>",
+        "Totaal prijs: ", $totaalprijs;
     }
-    
 
     /*
      * Werkt je formulier pas dan het formulier aan zodat je geen

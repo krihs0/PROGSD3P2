@@ -57,12 +57,16 @@ if (isset($_POST['submit'])) {
      * Alle andere letters moeten kleine letters zijn
      * Hiervoor gebruik je de functie strtolower()
      */
-    echo
+    if (is_numeric($huisnummer)){
+        echo
         ucfirst(strtolower($naam)), '<br>',
         ucfirst(strtolower($straat)), '<br>',
         $huisnummer, '<br>',
         $postcode, '<br>',
         ucfirst(strtolower($woonplaats)), '<br>';
+    }else{
+        echo "Huisnummer is geen nummer! <br> Voer een geldig nummer in.";
+    }
 
     /*
      * OPDRACHT 5:

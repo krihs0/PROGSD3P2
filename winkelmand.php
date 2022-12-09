@@ -31,15 +31,20 @@ if ($_POST['submit']) {
 
 
     // Controleer of het aantal > 0 is.
-    if ($aantal > 0) { 
-        $totaalprijs = $aantal * $prijs;
-
-        echo
-        "Gekozen Product en totaal prijs <br> <br>",
-        "Product: ", $product, "<br>",
-        "Aantal in winkelmand: ", $aantal, "<br>",
-        "Totaal prijs: ", $totaalprijs;
+    if(is_numeric($aantal)){
+        if ($aantal > 0) { 
+            $totaalprijs = $aantal * $prijs;
+    
+            echo
+            "Gekozen Product en totaal prijs <br> <br>",
+            "Product: ", $product, "<br>",
+            "Aantal in winkelmand: ", $aantal, "<br>",
+            "Totaal prijs: ", $totaalprijs;
+        }
+    }else{
+        echo "Voer een geldig nummer in bij Aantal";
     }
+    
 
     /*
      * Werkt je formulier pas dan het formulier aan zodat je geen

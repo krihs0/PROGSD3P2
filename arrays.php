@@ -2,7 +2,7 @@
 
 $aanhef = array(
     "aanhef" => "Beste",
-    "persoon" => "");
+    "persoon" => "Klant");
 
 $korting = array(
     "product" => "U heeft in de voorgaande bestelling voor [[product]] gekozen",
@@ -11,7 +11,7 @@ $korting = array(
 
 $ondertekening = array(
   "groet" => "Met vriendelijke groet,",
-  "naam" => "",
+  "naam" => "Kris",
   "functie" => "Directeur Webshop beheer"
 );
 

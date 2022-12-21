@@ -1,7 +1,7 @@
 <?php
 
 /*
- * Opdracht 1:
+ * Opdracht 1:Done
  * Maak de $weekdagen array af zodat alle dagen van de week erin staan
  * Voor de key en value gebruik je kleine letters, geen hoofdletters
  */
@@ -42,3 +42,7 @@ $weekdagen = array(
     'za' => 'zaterdag',
     'zo' => 'zondag'
     );
+
+    foreach ($weekdagen as $k => $v) {
+        echo $v, "<br>";
+    }

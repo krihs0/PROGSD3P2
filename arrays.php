@@ -28,9 +28,7 @@ $aanbieding = array_merge(
 );
 
 echo "<pre>";
-var_dump( $aanhef, "<br>",
-$korting, "<br>",
-$ondertekening);
+var_dump($aanbieding);
 echo "</pre>";
 
 

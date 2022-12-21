@@ -15,24 +15,32 @@ $ondertekening = array(
   "functie" => "Directeur Webshop beheer"
 );
 
+$korting["product"] = str_replace(
+  "[[product]]",
+  "chocola",
+  $korting["product"]
+);
+echo "<pre>";
 var_dump( $aanhef, "<br>",
 $korting, "<br>",
 $ondertekening);
+echo "</pre>";
+
 
 /*
- * Opdracht 1:
+ * Opdracht 1: DONE
  * Laat de inhoud van alle arrays zien
  * Gebruik daarvoor de functies var_dump() en print_r()
  */
 
 /*
- * Opdracht 2:
+ * Opdracht 2: DONE
  * Vervang de waarde van persoon, in de array aanhef naar 'klant'
  * Vervang de waarde van naam, in de array ondertekening naar 'jouw naam'
  */
 
 /*
- * Opdracht 3:
+ * Opdracht 3: DONE
  * Vervang het woord [[product]] door jouw gekozen product in de winkelmand opdracht
  * Gebruik hiervoor de methode str_replace().
  */

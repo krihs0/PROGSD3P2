@@ -7,13 +7,13 @@
  */
 
 /*
- * Opdracht 2:
+ * Opdracht 2:Done
  * Gebruik een loop om van alle elementen van je array de waarde te tonen op het scherm
  * Gebruik hiervoor een echo statement dus geen print_r of var_dump.
  */
 
 /*
- * Opdracht 3:
+ * Opdracht 3:Done
  * Wijzig alle waardes in je array met behulp van een loop en een switch
  * Alle waardes moeten beginnen met een hoofdletter. Bij 'za' en 'zo' moeten de waardes
  * van de dagen geheel uit hoofdletters bestaan.
@@ -43,6 +43,15 @@ $weekdagen = array(
     'zo' => 'zondag'
     );
 
-    foreach ($weekdagen as $k => $v) {
-        echo $v, "<br>";
+foreach ($weekdagen as $k => $v) {
+    // $v = ucfirst($v);
+    switch ($k){
+        case 'za':
+        case 'zo':
+            echo strtoupper($v), "<br>";
+        break;
+        default:
+            echo ucfirst($v), "<br>";
+        break;
     }
+}

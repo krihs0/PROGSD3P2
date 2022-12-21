@@ -20,6 +20,13 @@ $korting["product"] = str_replace(
   "chocola",
   $korting["product"]
 );
+
+$aanbieding = array_merge(
+  $aanhef,
+  $korting,
+  $ondertekening
+);
+
 echo "<pre>";
 var_dump( $aanhef, "<br>",
 $korting, "<br>",
